@@ -1,6 +1,5 @@
 package com.allin.knowledge.util.generic.service.impl;
 
-import com.allin.knowledge.business.config.MyBatisConfig;
 import com.allin.knowledge.util.StringTool;
 import com.allin.knowledge.util.generic.dao.GenericMapperDAO;
 import com.comm.util.page.Page;
@@ -25,7 +24,7 @@ public class GenericMapperServiceImpl<T1 extends GenericMapperDAO<?>, T2> {
 //					.getObject();//
 //			SqlSession session = SqlSessionUtils.getSqlSession(sessionFactory);
 
-			genericMapperDAO = 	MyBatisConfig.SqlSessionTemplate.getMapper(mapperClass);
+//			genericMapperDAO = 	MyBatisConfig.SqlSessionTemplate.getMapper(mapperClass);
         } catch (Exception e) {
             e.printStackTrace();
         }

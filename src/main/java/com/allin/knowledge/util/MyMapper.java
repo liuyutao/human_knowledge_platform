@@ -27,6 +27,9 @@ package com.allin.knowledge.util;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * 继承自己的MyMapper
  *
@@ -34,4 +37,16 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * @since 2016-07-21 15:53
  */
 public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
+
+    long create(Map paramMap);
+
+    long inserts(Map paramMap);
+
+    void update(Map paramMap);
+
+    List<T> getLists(Map paramMap);
+
+    T getById(long key);
+
+    int getCount(Map paramMap);
 }

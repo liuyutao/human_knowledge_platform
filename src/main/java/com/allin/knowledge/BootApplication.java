@@ -1,10 +1,8 @@
 package com.allin.knowledge;
 
-import com.allin.knowledge.business.config.MyBatisProperty;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -18,7 +16,7 @@ import java.util.Arrays;
  */
 @SpringBootApplication
 //@MapperScan(basePackages = "com.allin.knowledge.mapper")
-@EnableConfigurationProperties({MyBatisProperty.class})//加载配置文件信息
+//@EnableConfigurationProperties({MyBatisProperty.class})//加载配置文件信息
 public class BootApplication {
 
     public static void main(String[] args) {
