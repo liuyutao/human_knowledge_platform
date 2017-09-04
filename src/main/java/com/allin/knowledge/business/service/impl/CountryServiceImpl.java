@@ -3,7 +3,6 @@ package com.allin.knowledge.business.service.impl;
 import com.allin.knowledge.business.service.CountryService;
 import com.allin.knowledge.mapper.CountryMapper;
 import com.allin.knowledge.model.Country;
-import com.allin.knowledge.util.generic.service.impl.DecorateMapperServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +20,7 @@ public class CountryServiceImpl implements CountryService{
     private CountryMapper countryMapper;
 
     public List<Country> getList(Map paramMap) {
-        return countryMapper.getLists(paramMap);
+        return countryMapper.getList(paramMap);
     }
 
 }

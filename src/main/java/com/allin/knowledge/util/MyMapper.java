@@ -44,6 +44,8 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 
     void update(Map paramMap);
 
+    List<T> getList(Map paramMap);
+
     List<T> getLists(Map paramMap);
 
     T getById(long key);

@@ -57,11 +57,14 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>1.9</version>
+
         </dependency>
         <dependency>
             <groupId>com.base.util</groupId>  <!--自定义-->
             <artifactId>baseUtil</artifactId>    <!--自定义-->
             <version>1.1.1</version> <!--自定义-->
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/basic_util-1.0.0.jar</systemPath>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-restlet -->
         <dependency>
@@ -264,7 +267,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.allin.knowledge.Application</mainClass>
+                            <mainClass>com.base.pay.Application</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
@@ -273,17 +276,59 @@
                     </classesDirectory>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-
         </plugins>
+
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<skip>true</skip>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<dependencies>-->
+                    <!--<dependency>-->
+                        <!--<groupId>org.springframework</groupId>-->
+                        <!--<artifactId>springloaded</artifactId>-->
+                        <!--<version>1.2.6.RELEASE</version>-->
+                    <!--</dependency>-->
+                <!--</dependencies>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-jar-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<archive>-->
+                        <!--<manifest>-->
+                            <!--<mainClass>com.allin.knowledge.BootApplication</mainClass>-->
+                            <!--<addClasspath>true</addClasspath>-->
+                            <!--<classpathPrefix>lib/</classpathPrefix>-->
+                        <!--</manifest>-->
+                    <!--</archive>-->
+                    <!--<classesDirectory>-->
+                    <!--</classesDirectory>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>lib</directory>-->
+                <!--<targetPath>BOOT-INF/lib/</targetPath>-->
+                <!--<includes>-->
+                    <!--<include>**/*.jar</include>-->
+                <!--</includes>-->
+            <!--</resource>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<targetPath>BOOT-INF/classes/</targetPath>-->
+            <!--</resource>-->
+        <!--</resources>-->
+
+
 
 
     </build>
