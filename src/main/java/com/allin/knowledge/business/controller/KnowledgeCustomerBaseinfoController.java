@@ -25,7 +25,7 @@
 package com.allin.knowledge.business.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.allin.knowledge.business.service.KnowledgeCommDataMaterielService;
+import com.allin.knowledge.business.service.KnowledgeCustomerBaseinfoService;
 import com.allin.knowledge.model.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,11 +41,11 @@ import java.util.Map;
  * @date 2017-9-5 21:04:14
  */
 @RestController
-@RequestMapping("/comm/data/materiel")
-public class KnowledgeCommDataMaterielController {
+@RequestMapping("/customer/baseinfo")
+public class KnowledgeCustomerBaseinfoController {
 
     @Autowired
-    private KnowledgeCommDataMaterielService materielService;
+    private KnowledgeCustomerBaseinfoService baseinfoService;
 
     @RequestMapping(value = "/getLists", method = RequestMethod.GET)
     public String getLists(@RequestParam Map paramMap) {
@@ -62,13 +62,7 @@ public class KnowledgeCommDataMaterielController {
             paramMap.put("maxResult", Integer.parseInt(paramMap.get("maxResult").toString()));
 
         }
-        return JSON.toJSONString(materielService.getLists(paramMap));
+        return JSON.toJSONString(baseinfoService.getList(paramMap));
     }
 
-    @RequestMapping(value = "/getMapList", method = RequestMethod.GET)
-    public String getMapList(@RequestParam Map paramJson) {
-        System.out.println("======" + paramJson);
-        System.out.println(JSON.toJSONString(materielService.getMapList(paramJson)));
-        return JSON.toJSONString(materielService.getMapList(paramJson));
-    }
 }
