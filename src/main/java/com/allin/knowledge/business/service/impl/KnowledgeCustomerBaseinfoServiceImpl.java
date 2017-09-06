@@ -20,7 +20,7 @@ public class KnowledgeCustomerBaseinfoServiceImpl implements KnowledgeCustomerBa
     private KnowledgeCustomerBaseinfoMapper baseinfoMapper;
 
     public List<KnowledgeCustomerBaseinfo> getList(Map paramMap) {
-        return baseinfoMapper.getList(paramMap);
+        return baseinfoMapper.getLists(paramMap);
     }
 
 }

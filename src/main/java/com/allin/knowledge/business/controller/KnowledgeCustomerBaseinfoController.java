@@ -41,7 +41,7 @@ import java.util.Map;
  * @date 2017-9-5 21:04:14
  */
 @RestController
-@RequestMapping("/customer/baseinfo")
+    @RequestMapping("/customer/baseinfo")
 public class KnowledgeCustomerBaseinfoController {
 
     @Autowired
