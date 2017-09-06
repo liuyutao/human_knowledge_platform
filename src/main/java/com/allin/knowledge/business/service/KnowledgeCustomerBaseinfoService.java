@@ -9,4 +9,5 @@ public interface KnowledgeCustomerBaseinfoService {
 
     public List<KnowledgeCustomerBaseinfo> getList(Map paramMap);
 
+    public Map getMapList(Map paramJson);
 }

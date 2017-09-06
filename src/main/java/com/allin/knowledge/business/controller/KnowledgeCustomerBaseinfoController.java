@@ -65,4 +65,10 @@ public class KnowledgeCustomerBaseinfoController {
         return JSON.toJSONString(baseinfoService.getList(paramMap));
     }
 
+    @RequestMapping(value = "/getMapList", method = RequestMethod.GET)
+    public String getMapList(@RequestParam Map paramJson) {
+        System.out.println("======" + paramJson);
+        System.out.println(JSON.toJSONString(baseinfoService.getMapList(paramJson)));
+        return JSON.toJSONString(baseinfoService.getMapList(paramJson));
+    }
 }

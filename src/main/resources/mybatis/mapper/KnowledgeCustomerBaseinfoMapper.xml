@@ -26,4 +26,11 @@
     <include refid="abatorgenerated_Example_Where_Clause" />
     limit #{firstResult, jdbcType=BIGINT},#{maxResult, jdbcType=BIGINT}
   </select>
+    <select id="getList" parameterType="java.util.HashMap" resultMap="abatorgenerated_KnowledgeCustomerBaseinfoResult">
+    select id, customer_id, customer_name, department_id, department_name, mobile, sex, sort_id, is_valid from knowledge_customer_baseinfo
+    WHERE 1=1
+    <include refid="abatorgenerated_Example_Where_Clause" />
+    limit #{firstResult, jdbcType=BIGINT},#{maxResult, jdbcType=BIGINT}
+  </select>
+
 </mapper>
