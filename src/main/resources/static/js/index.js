@@ -1087,9 +1087,8 @@ $(function () {
                 return '<a class="dropdown-item" href="#" departmentId=' + item.departmentId + '>' + item.departmentName + '</a>';
             });
             var usersHtml = $.map(users, function (item) {
-                return '<a class="dropdown-item" href="#"  customerId=' + item.customerId + '>' + item.customerName + '</a>';
+                return '<a class="dropdown-item" href="#"  customerId=' + item.customerId + ' departmentId=' + item.departmentId + '>' + item.customerName + '</a>';
             });
-            debugger;
             $("#departs").html(departsHtml.join(""));
             $("#users").html(usersHtml.join(""));
 
@@ -1101,7 +1100,6 @@ $(function () {
             });
             $("#users a").on("click", function (e) {
                 $("#userSelect").text($(this).text());
-                debugger;
                 t.customerId = $(this).attr("customerId");
             })
         },
@@ -1113,7 +1111,6 @@ $(function () {
                 t.startAnswer();
                 $(this).hide();
                 $("#next").show();
-                $("#submit").show();
                 t.bindSubmit();
                 t.bindNext();
                 t.bindPrev();
@@ -1127,7 +1124,7 @@ $(function () {
                     if (t.picIndex == 1) {
                         $("#prev").show();
                     }
-
+                    $("#submit").hide();
                     t.show(t.picIndex);
                 }
             });
@@ -1143,6 +1140,7 @@ $(function () {
                     }
                     if (t.picIndex == 3) {
                         $("#prev").show();
+                        $("#submit").show();
                     }
                     t.show(t.picIndex);
                 }
