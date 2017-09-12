@@ -15,8 +15,8 @@
 
   <!-- 通用查询结果列-->
   <sql id="abatorgenerated_Example_Where_Clause">
-    <if test="customerId!=null">and customerId = #{customerId,jdbcType=BIGINT}</if>
-    <if test="customerName!=null">and customerName = #{customerName,jdbcType=VARCHAR}</if>
+    <if test="customerId!=null">and customer_id = #{customerId,jdbcType=BIGINT}</if>
+    <if test="customerName!=null">and customer_name = #{customerName,jdbcType=VARCHAR}</if>
   </sql>
 
   <!-- 查询getList -->

@@ -43,7 +43,7 @@ public class KnowledgeCustomerBaseinfoServiceImpl implements KnowledgeCustomerBa
                 paramJson.put("maxResult", Long.parseLong(paramJson.get("maxResult").toString()));
             }
             List<Map> respList = new ArrayList<Map>();
-            List<KnowledgeCustomerBaseinfo> materielList = baseinfoMapper.getLists(paramJson);
+            List<KnowledgeCustomerBaseinfo> materielList = baseinfoMapper.getList(paramJson);
             if (CollectionUtils.isNotEmpty(materielList)){
                 for (KnowledgeCustomerBaseinfo knowledgeCustomerBaseinfo : materielList) {
                     respList.add(MapUtil.transBean2Map(knowledgeCustomerBaseinfo));

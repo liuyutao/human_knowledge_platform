@@ -90,6 +90,7 @@ public class KnowledgeCustomerAnswerController {
         }
         List<Map> optionList = null;
         optionList = JSONArray.fromObject(optionJson.toString());
+        System.out.println("==========" + paramJson);
         Map saveMap;
         Map optionMap;
         int sortId = 0;
